@@ -276,13 +276,11 @@ function append(container, data) {
   });
 }
 function addToCart(ele) {
-  // console.log(ele);
+  console.log(ele);
   boatArr.push(ele);
-  // console.log(boatArr);
   localStorage.setItem("boat", JSON.stringify(boatArr));
-  window.location.reload();
+  // window.location.reload();
 }
-
 append(card, best_seller);
 append(dealday, dealOftheDay);
 
@@ -338,9 +336,3 @@ function videoAppend() {
 }
 
 videoAppend();
-document.getElementById("cart-click").addEventListener("click", () => {
-  window.location.href = "../fw19_0912/cart.html";
-});
-
-let boatProduct = JSON.parse(localStorage.getItem("boat"));
-document.getElementById("total_product").innerText = boatProduct.length;

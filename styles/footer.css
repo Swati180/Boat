@@ -71,6 +71,10 @@
   cursor: pointer;
 }
 
+#footer img {
+  width: 30%;
+  /* border: 1px solid red; */
+}
 .text-subscribe {
   padding: 20px 0px;
 }
@@ -81,20 +85,21 @@
   width: 75%;
   padding: 2px;
 }
-.subscribe > button {
+.subscribe>button{
   padding: 10px 20px;
   border: none;
   background-color: red;
   border-radius: 5px;
   color: white;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   font-size: 15px;
-  cursor: pointer;
+ cursor: pointer;
 }
-.subscribe > input {
-  background-color: #000000;
+.subscribe>input{
+ background-color: #000000;
   border: #000000;
   padding: 8px;
   color: white;
+
 }

@@ -96,17 +96,14 @@ data.forEach(function(element){
 })
 
 // display function
-// let arr=[
-//     {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_400x.png?v=1648108782",name:"swati Parmar",price:54,rating:2.5},
-//     {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_400x.png?v=1648108782",name:"swati Parmar",price:67,rating:2.5},
-//     {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",name:"swati Parmar",price:45,rating:3.5},
-//     {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",name:"swati Parmar",price:545,rating:4.5},
+let arr=[
+    {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_400x.png?v=1648108782",name:"swati Parmar",price:54,},
+    {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_400x.png?v=1648108782",name:"swati Parmar",price:67,},
+    {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",name:"swati Parmar",price:45,},
+    {image:"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_400x.png?v=1642405569",name:"swati Parmar",price:545,},
 
 
-// ] 
-
-var arr = JSON.parse(localStorage.getItem("boat"))||[];
-
+] 
 function displayPay(arr){
     let sumu=0;
     let addingPayProduct= document.getElementById("productFinal");
@@ -122,9 +119,7 @@ function displayPay(arr){
         name.innerText = elem.name;
     
         let quantityPay = document.createElement("p");
-        // var rating = document.createElement("p")
-        quantityPay.innerText = "Rating : " + elem.rating;
-        // quantityPay.innerText = "Quantity : 1";
+        quantityPay.innerText = "Quantity : 1";
     
         let pricePay = document.createElement("p");
         pricePay.innerText = "Price : ₹ " + elem.price;
@@ -145,13 +140,15 @@ function subTotal(){
     })
     document.getElementById('subtotal').innerText="₹"+sum; 
     // Total
-    document.getElementById('subbTotal').innerText="₹"+sum; 
+    document.getElementById('Total').innerText="₹"+sum; 
 
 }
 subTotal(arr)
 
-document.getElementById("closeBtn").addEventListener("click", function(){
-    document.querySelector("#Parentcontainer").style.display="none";
+let closePay= document.getElementById("closeBtn");
+closePay.addEventListener("click", function(){
+    let payPopUp= document.querySelector(".container");
+    payPopUp.style.display="none";
 });
 
 document.getElementById("Confirm").addEventListener("click", function(){
